@@ -1,5 +1,4 @@
 // Get modules node
-const path = require('path');
 const mkdirp = require('mkdirp');
 
 function sleep(ms) {
@@ -8,26 +7,16 @@ function sleep(ms) {
     });
 }
 
-const folderName = `${new Date().toISOString().replace(/:/g, '_')}`;
-let imageIndex = 0;
-
-const getScreenshotOptions = function getScreenshotOptions() {
-    return {
-        path: `Images\\${folderName}\\img${imageIndex++}.png`,
-    };
-};
-
-function CreateFolderImageName() {
+function createFolder(path) {
     try {
-        const fullpath = `Images\\${folderName}`;
-        mkdirp(fullpath);
+        mkdirp(path);
     } catch (ex) {
+        // eslint-disable-next-line no-console
         console.log(ex);
     }
 }
 
 module.exports = {
     sleep,
-    getScreenshotOptions,
-    CreateFolderImageName,
+    createFolder,
 };
