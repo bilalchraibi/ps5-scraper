@@ -42,11 +42,11 @@ async function scapper() {
     await browser.close();
 }
 
-// const task = cron.schedule('*/30 * * * * *', async () => {
-//     await scapper();
-//     console.log(new Date().toISOString());
-// });
-
-(async () => {
+const task = cron.schedule('*/30 * * * * *', async () => {
     await scapper();
-})();
+    console.log(new Date().toISOString());
+});
+
+// (async () => {
+//     await scapper();
+// })();
