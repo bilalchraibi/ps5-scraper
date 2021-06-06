@@ -1,0 +1,21 @@
+{
+  "name": "playwrighttest",
+  "version": "1.0.0",
+  "description": "Playwright",
+  "main": "index.js",
+  "dependencies": {
+    "mkdirp": "^1.0.4",
+    "node-cron": "^3.0.0",
+    "playwright": "^1.11.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.28.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Bilal Chraibi",
+  "license": "MIT"
+}
