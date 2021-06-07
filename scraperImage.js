@@ -1,6 +1,6 @@
 const helpers = require('./helper');
 
-module.exports = class ScrapperImage {
+module.exports = class ScraperImage {
     constructor() {
         this.imageIndex = 0;
         // Create a folder with the current date to store the images that are captured during the scrapping.

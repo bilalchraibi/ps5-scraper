@@ -2,11 +2,11 @@ const { webkit } = require('playwright');
 const cron = require('node-cron');
 const urls = require('./items-urls');
 const helpers = require('./helper');
-const ScrapperImage = require('./scrapperImage');
+const ScraperImage = require('./scraperImage');
 
-async function scapper() {
+async function scaper() {
     // Declare variable that will be used during the scrapping
-    const imagelogic = new ScrapperImage();
+    const imagelogic = new ScraperImage();
     imagelogic.createImagesFolder();
     const browser = await webkit.launch();
     const page = await browser.newPage();
@@ -43,10 +43,6 @@ async function scapper() {
 }
 
 const task = cron.schedule('*/30 * * * * *', async () => {
-    await scapper();
+    await scaper();
     console.log(new Date().toISOString());
 });
-
-// (async () => {
-//     await scapper();
-// })();
